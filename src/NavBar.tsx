@@ -1,13 +1,17 @@
 import { Container, Heading, HStack, Stack, Tag } from "@chakra-ui/react";
+import logo from "./lt-dan.png";
 
 function NavBar() {
   return (
     <Stack w="100%" py="6" bg="white" justify="space-between" direction="row">
       <Container maxW="3xl">
         <HStack justify="space-between" spacing="4">
-          <Heading size="md">Solana - Explorer</Heading>
+        <img src={logo} className="logo" />
+          <Heading size="md">
+            Monke Baby Explorer
+          </Heading>
           <Tag size="lg" color="pink.700">
-            Devnet
+            Mainnet
           </Tag>
         </HStack>
       </Container>
