@@ -47,7 +47,7 @@ const getProvider = (): PhantomProvider | undefined => {
   window.open("https://phantom.app/", "_blank");
 };
 
-const NETWORK = clusterApiUrl("devnet");
+const NETWORK = clusterApiUrl("mainnet-beta");
 
 export default function BalanceCard() {
   const provider = getProvider();
@@ -93,17 +93,15 @@ export default function BalanceCard() {
 
   return (
     <VStack w="100%" align="start" background="white" rounded="lg" p="4">
+      <Text>Currently, this is a test to connect to your Mainnet wallet and return your Solana balance. As this code matures, it will be able to detect which monke babies you have in your wallet, and do some fun stuff with them! Try it out :)</Text>
+      
       {provider && provider.publicKey ? (
         <>
           <Heading size="md">Your Address:</Heading>
           <Text>{provider.publicKey?.toBase58()}</Text>
-          <Text>{balance}</Text>
+          <Text>Current sol balance: {balance}</Text>
 
           <Button onClick={disconnect}>Disconnect</Button>
-          <Text fontWeight="bold">Logs</Text>
-          {logs.map((log, i) => (
-            <Text key={i}>{log}</Text>
-          ))}
         </>
       ) : (
         <>
