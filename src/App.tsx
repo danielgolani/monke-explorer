@@ -32,7 +32,7 @@ export default function App() {
         {/* <SearchCard /> */}
 
         {/* Get user SOL balance with Phantom Wallet */}
-        {/* <BalanceCard /> */}
+        <BalanceCard /> 
       </Container>
     </>
   );
