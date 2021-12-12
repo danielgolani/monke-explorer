@@ -1,6 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
 
-const BG_COLOR = "purple.300";
+const BG_COLOR = "#ffffff";
 
 const config = {
   initialColorMode: "light",
